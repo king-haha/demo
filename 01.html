@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>day-01</title>
+    <style>
+        a,
+        body,
+        center,
+        cite,
+        code,
+        dd,
+        del,
+        div,
+        dl,
+        dt,
+        em,
+        fieldset,
+        figcaption,
+        figure,
+        footer,
+        form,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        header,
+        hr,
+        html,
+        img,
+        input,
+        label,
+        legend,
+        li,
+        mark,
+        ol,
+        p,
+        section,
+        span,
+        strong,
+        textarea,
+        time,
+        ul,
+        var input {
+            margin: 0;
+            border: 0;
+            padding: 0;
+            font-style: normal;
+            color: #fff;
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            /* Firefox */
+            -webkit-box-sizing: border-box;
+            /* Safari */
+        }
+
+        ul {
+            width: 100%;
+            list-style: none;
+            text-decoration: none;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        li {
+            width: 32%;
+            padding-top: 31%;
+            height: 0;
+            float: left;
+            /* box-sizing: border-box; */
+            margin-left: 1%;
+            margin-top: 1%;
+            position: relative;
+        }
+
+        li div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: yellow;
+            border: 1px solid red;
+            border-radius: 8px;
+        }
+
+        .clearfix:after {
+            content: "";
+            height: 0;
+            line-height: 0;
+            display: block;
+            visibility: hidden;
+            clear: both;
+        }
+
+        .clearfix {
+            zoom: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- margin 负值法 是使用三个浮动元素：
+                主页面 main 使用嵌套标签
+                左边栏 left 使用 margin-left = -100% 实现的
+                右边栏 right 使用 margin-left = -(左边栏的宽度值)px实现的
+    -->
+
+
+    <!-- 效果实现：li标签浮动之后没有高度  是使用 padding-top = 31% 顶出来的  
+         然后li标签里面的 div 使用绝对定位 -->
+    <ul class="box_01 clearfix">
+        <li>
+            <div></div>
+        </li>
+        <li>
+            <div></div>
+        </li>
+        <li>
+            <div></div>
+        </li>
+        <li>
+            <div></div>
+        </li>
+        <li>
+            <div></div>
+        </li>
+        <li>
+            <div></div>
+        </li>
+        <li>
+            <div></div>
+        </li>
+        <li>
+            <div></div>
+        </li>
+        <li>
+            <div></div>
+        </li>
+    </ul>
+</body>
+
+</html>
