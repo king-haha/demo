@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>rem</title>
+    <style>
+        div{
+            font-size: 30px;
+        }
+        /* 
+            em 与 rem 都有一个默认的初始值大小
+            1rem 默认是 16px
+        */
+        .class_em{
+            /* em 的大小是根据父类元素的 font-size 而来的 */
+            font-size: 2em;
+            /* display: block;
+            height: 2em; */
+        }
+        .class_rem{
+            /* 
+                rem 中的 r 意思 root '根'的意思 
+                而页面的'根'是 html 标签
+                所以 rem 的大小是根据 html 标签的 font-size 而来的
+            */
+            font-size: 2rem;
+            /* display: block;
+            height: 2rem; */
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <span class="class_em">EM</span>
+        <span class="class_rem">REM</span>
+    </div>
+</body>
+
+</html>
