@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>支付宝登录</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        #app {
+            width: 800px;
+            height: 300px;
+            margin: 100px auto;
+            border: 1px solid #ccc;
+            box-shadow: 1px 2px #ccc;
+            padding-top: 80px;
+        }
+
+        label {
+            margin-left: 80px;
+        }
+
+        input {
+            padding: 10px;
+            margin-left: 10px;
+            width: 300px;
+        }
+
+        ul {
+            margin-left: 126px;
+            margin-top: -1px;
+            border: 1px solid #ccc;
+            width: 302px;
+            padding: 4px 10px;
+        }
+
+        li {
+            overflow: hidden;
+            line-height: 24px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <label for="log-in">登录</label>
+        <input id="log-in" v-model="msg" type="text" placeholder="请输入电子邮箱" maxlength="20">
+        <ul v-if="msg">
+            <li v-for="item in mail">{{dealMsg}}@{{item}}</li>
+        </ul>
+    </div>
+    <script src="vue.js"></script>
+    <script type="text/javascript">
+        var app = new Vue({
+            el: '#app',
+            data: {
+                msg: '',
+                mail: ['163.com', 'qq.com', '189.cn', '126.com', 'sina.com', 'sohu.com', 'hotmail.com',
+                    'gmail.com', '21cn.com'
+                ]
+            },
+            //动态绑定的数据
+            computed: {
+                dealMsg: function (v) {
+                    // 获取 @ 的位置
+                    var num = this.msg.indexOf('@');
+                    // 处理 @ 的 length 是否小于0的情况（字符串中不存在该字符串 length为-1）
+                    num = num < 0 ? this.msg.length : num;
+                    // 处理msg，截取@前面的字符串
+                    return this.msg.slice(0, num);
+                    // slice(a,b) 截取的时候 不计算序列号为 b 的字符
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
