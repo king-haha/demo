@@ -30,7 +30,6 @@
             padding: 10px;
             margin-left: 10px;
             width: 300px;
-            display: flex;
         }
 
         ul {
@@ -74,7 +73,6 @@
                     // 处理 @ 的 length 是否小于0的情况（字符串中不存在该字符串 length为-1）
                     num = num < 0 ? this.msg.length : num;
                     // 处理msg，截取@前面的字符串
-                    // console.log(v);
                     return this.msg.slice(0, num);
                     // slice(a,b) 截取的时候 不计算序列号为 b 的字符
                 }
